@@ -32,7 +32,7 @@ app.post("/notify", (req, res) => {
   const notification = req.body;
   console.log("notification", notification);
   broadcastNotification(notification);
-  res.json({ success: true });
+  res.status(200).json({ success: true });
 });
 
 httpServer.listen(PORT, () => {

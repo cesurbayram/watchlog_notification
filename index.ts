@@ -1,11 +1,11 @@
 import { Server } from "socket.io";
 import { createServer } from "http";
 import express from "express";
-import "dotenv/config";
+import { ON_PREM_NOTIFICATION_SOCKET_PORT } from "./on-prem-config.js";
 
 const app = express();
 
-const PORT = process.env.NOTIFICATION_SOCKET_PORT || 4001;
+const PORT = ON_PREM_NOTIFICATION_SOCKET_PORT;
 
 const httpServer = createServer(app);
 
